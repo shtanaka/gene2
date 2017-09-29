@@ -31,7 +31,7 @@ class HTTPClient(object):
         try:
             sock.connect((self.host, self.port))
             return sock
-        except socket.error:
+        except:
             return None
 
     def recvall(self, sock):
@@ -62,6 +62,5 @@ class HTTPClient(object):
 
 
 if __name__ == "__main__":
-
     client = HTTPClient(sys.argv[1], int(sys.argv[2]))
     client.notify_server()
