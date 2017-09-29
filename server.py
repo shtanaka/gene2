@@ -134,6 +134,7 @@ if __name__ == "__main__":
     # server_thread.start()
 
     resourcesDB = ResourcesDB()
+    resourcesDB.daemon = True
     resourcesDB.start()
     server = SocketServer.TCPServer((HOST, PORT), Server)
     server.serve_forever()
