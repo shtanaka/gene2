@@ -63,8 +63,5 @@ class HTTPClient(object):
 
 if __name__ == "__main__":
 
-    try:
-        client = HTTPClient(sys.argv[1], int(sys.argv[2]), sys.argv[3] + " " + sys.argv[4])
-    except:
-        print "usage: python client.py 'ip' 'port 'cpu' 'ram'"
+    client = HTTPClient(sys.argv[1], int(sys.argv[2]))
     client.notify_server()

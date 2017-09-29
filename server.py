@@ -125,7 +125,7 @@ class ResourcesDB(threading.Thread):
 
 
 if __name__ == "__main__":
-    HOST, PORT = "localhost", int(sys.argv[1])
+    HOST, PORT = "ec2-52-35-106-21.us-west-2.compute.amazonaws.com", int(sys.argv[1])
 
     # server = ThreadedTCPServer((HOST, PORT), Server)
     # ip, port = server.server_address
